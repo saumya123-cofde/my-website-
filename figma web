@@ -1,0 +1,729 @@
+import * as React from "react";
+2
+3function MyComponent() {
+4return (
+5  <div className="flex flex-col">
+6    <div className="flex flex-col items-center px-20 pt-14 w-full bg-slate-200 max-md:px-5 max-md:max-w-full">
+7      <div className="flex gap-5 justify-between items-center max-w-full font-bold uppercase w-[917px] max-md:flex-wrap">
+8        <img
+9          loading="lazy"
+10          src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e528cccf16d28b4b485eb8c0720c020f819b168765179a3627b3ffe01bb1f8d?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+11          className="shrink-0 self-stretch aspect-square w-[54px]"
+12        />
+13        <div className="flex gap-5 justify-between self-stretch my-auto text-sm leading-5 text-black max-md:flex-wrap">
+14          <div>How it works</div>
+15          <div className="text-red-400">About</div>
+16          <div>Work</div>
+17          <div>Pricing</div>
+18          <div>Blog</div>
+19        </div>
+20        <div className="flex flex-col justify-center self-stretch my-auto text-base leading-5 text-white">
+21          <div className="justify-center px-7 py-4 bg-red-500 rounded-lg max-md:px-5">
+22            get started
+23          </div>
+24        </div>
+25      </div>
+26      <div className="mt-14 text-5xl font-bold text-center text-red-400 capitalize leading-[55px] max-md:mt-10 max-md:max-w-full max-md:text-4xl max-md:leading-[49px]">
+27        A UI/UX design subscription so{" "}
+28        <span className="text-red-400">good </span>
+29        <br />
+30        it should come with a <span className="text-red-400">warning </span>
+31        label
+32      </div>
+33      <div className="flex justify-center items-center px-16 mt-9 w-full text-lg font-bold leading-7 text-black max-w-[1336px] max-md:px-5 max-md:max-w-full">
+34        <div className="flex gap-5 justify-between max-md:flex-wrap">
+35          <div className="flex gap-2">
+36            <img
+37              loading="lazy"
+38              srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+39              className="shrink-0 aspect-[1.04] w-[27px]"
+40            />
+41            <div className="my-auto">No hiring headaches</div>
+42          </div>
+43          <div className="flex gap-2">
+44            <img
+45              loading="lazy"
+46              srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+47              className="shrink-0 aspect-[1.04] w-[27px]"
+48            />
+49            <div className="my-auto">Weekly turnaround times</div>
+50          </div>
+51          <div className="flex gap-2">
+52            <img
+53              loading="lazy"
+54              srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/fa0bd5eec77ab15d0511b5e1531f2514a2adf2401c26f0cf1709623bafe7901b?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+55              className="shrink-0 aspect-[1.04] w-[27px]"
+56            />
+57            <div className="my-auto">One flat monthly rate</div>
+58          </div>
+59        </div>
+60      </div>
+61      <div className="justify-center py-2.5 pr-2.5 pl-4 mt-6 text-lg font-bold leading-7 text-white uppercase rounded-2xl backdrop-blur-[20px]">
+62        start your risk free trial
+63      </div>
+64      <div className="flex z-10 gap-5 justify-between mt-32 -mb-3 max-w-full w-[642px] max-md:flex-wrap max-md:mt-10 max-md:mb-2.5">
+65        <img
+66          loading="lazy"
+67          src="https://cdn.builder.io/api/v1/image/assets/TEMP/d4b503ebbf5f58b69cf6961f8e6b154df5d84891357ad6d2a3cb3edadbf1f456?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+68          className="shrink-0 self-end mt-12 max-w-full aspect-[0.65] w-[157px] max-md:mt-10"
+69        />
+70        <img
+71          loading="lazy"
+72          src="https://cdn.builder.io/api/v1/image/assets/TEMP/3e61a2d7c5737acce90f125911f32db0860daf233bf87b19c6bab86a3595fedd?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+73          className="shrink-0 max-w-full aspect-[0.68] w-[198px]"
+74        />
+75      </div>
+76    </div>
+77    <div className="flex justify-center items-center px-16 py-20 w-full bg-stone-800 max-md:px-5 max-md:max-w-full">
+78      <div className="flex flex-col mt-1 w-full max-w-[1156px] max-md:max-w-full">
+79        <div className="self-center text-4xl font-bold leading-10 text-center text-red-400 capitalize max-md:max-w-full">
+80          We helped our customers raise{" "}
+81          <span className="text-red-400">$1B+</span>
+82        </div>
+83        <div className="mt-14 max-md:mt-10 max-md:max-w-full">
+84          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+85            <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+86              <img
+87                loading="lazy"
+88                src="https://cdn.builder.io/api/v1/image/assets/TEMP/a51af717cd7b0e3ab2e403ab594f673059c0b842c54375112ca4b62960c52c15?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+89                className="grow shrink-0 max-w-full aspect-[2.5] w-[250px] max-md:mt-10"
+90              />
+91            </div>
+92            <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+93              <div className="flex grow gap-2.5 justify-center px-8 py-10 max-md:px-5 max-md:mt-10">
+94                <img
+95                  loading="lazy"
+96                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/1858da41cc4a8b24e3c89437351f408cae352af965247963863f4b310277f05f?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+97                  className="shrink-0 max-w-full aspect-[6.25] fill-white w-[156px]"
+98                />
+99                <img
+100                  loading="lazy"
+101                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/67be46f4699141338cf8e2f3d26739ec3b14d7cb485219d633f14f38c0e2de63?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+102                  className="shrink-0 aspect-square fill-white w-[25px]"
+103                />
+104              </div>
+105            </div>
+106            <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+107              <img
+108                loading="lazy"
+109                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c413bab53cd2d5586286d45cd39b2097e22de5b20bca114e845d6bae13a69f59?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+110                className="grow shrink-0 max-w-full aspect-[2.5] w-[250px] max-md:mt-10"
+111              />
+112            </div>
+113            <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+114              <div className="flex grow gap-0 justify-center items-start px-20 py-7 max-md:px-5 max-md:mt-10">
+115                <img
+116                  loading="lazy"
+117                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/147e080be4931d7497821d2b44a58d83c110f2e5781cc9c40ac6638e9d9c146e?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+118                  className="shrink-0 mt-2.5 w-8 aspect-square fill-white"
+119                />
+120                <img
+121                  loading="lazy"
+122                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7daa6cc032c8f8ae84450e281107d7941d43fbfe2d9693489464bf4f66ece73?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+123                  className="shrink-0 aspect-[0.27] fill-white w-[11px]"
+124                />
+125                <img
+126                  loading="lazy"
+127                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8244261cf220e9507e8a6d9489e5aaf326a2e77e293242bb934e0ebd7ae1fe08?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+128                  className="shrink-0 self-stretch w-8 aspect-[0.76] fill-white"
+129                />
+130                <img
+131                  loading="lazy"
+132                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/b94c35442a9f9759476b1b9547f2c42eb5e0ca07f92d9136bbbd1f1e038194b5?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+133                  className="shrink-0 mt-3 aspect-[0.77] fill-white w-[23px]"
+134                />
+135              </div>
+136            </div>
+137          </div>
+138        </div>
+139      </div>
+140    </div>
+141    <div className="flex justify-center items-center px-16 py-20 w-full bg-neutral-100 max-md:px-5 max-md:max-w-full">
+142      <div className="flex flex-col items-center mt-20 mb-2 w-full max-w-[1170px] max-md:mt-10 max-md:max-w-full">
+143        <div className="flex flex-col self-start ml-11 max-w-full text-center w-[1025px]">
+144          <div className="text-4xl font-bold leading-10 text-red-400 capitalize max-md:max-w-full">
+145            A diverse team of <span className="text-red-400">passionate</span>{" "}
+146            UX nerds who are here to help your{" "}
+147            <span className="text-red-400">startup succeed</span>
+148          </div>
+149          <div className="self-center mt-8 text-base font-medium leading-6 text-black w-[841px] max-md:max-w-full">
+150            From ideation to expansion, TDP understands the unique demands of
+151            your startup—providing you with optimized design strategies and
+152            fast turnarounds for an affordable monthly subscription.
+153          </div>
+154        </div>
+155        <div className="self-stretch mt-7 max-md:max-w-full">
+156          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+157            <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+158              <div className="flex flex-col grow items-center mt-5 text-black max-md:mt-10">
+159                <img
+160                  loading="lazy"
+161                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/899f71c7b6820b2602eb8d0ad16007161ef740cdc3870a31899dc4aa97bf2761?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+162                  className="max-w-full aspect-[1.37] w-[150px]"
+163                />
+164                <div className="mt-7 text-xl font-bold leading-6">
+165                  Costs 70% less
+166                </div>
+167                <div className="self-stretch mt-6 text-sm leading-6 text-center">
+168                  We developed highly-optimized design processes to let us
+169                  work fast and deliver incredible results—and we pass those
+170                  savings on to you
+171                </div>
+172              </div>
+173            </div>
+174            <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+175              <div className="flex flex-col grow items-center text-black max-md:mt-10">
+176                <img
+177                  loading="lazy"
+178                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/30fe9e32b030ebfc517ed5a3fb1e99778070f6b99451d15681c2f9f2ed8e607d?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+179                  className="max-w-full aspect-[1.15] w-[150px]"
+180                />
+181                <div className="mt-7 text-xl font-bold leading-6">
+182                  Adaptable and scalable
+183                </div>
+184                <div className="self-stretch mt-5 text-base leading-6 text-center">
+185                  High-velocity is crucial to a startup’s success, and that’s
+186                  why TDP delivers new designs every week so your momentum
+187                  never falters
+188                </div>
+189              </div>
+190            </div>
+191            <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+192              <div className="flex flex-col items-center text-black max-md:mt-10">
+193                <img
+194                  loading="lazy"
+195                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/e18071707a072153dd84e648180522892c52c2105642fe991ef7007d8f6fabf0?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+196                  className="max-w-full aspect-[1.15] w-[150px]"
+197                />
+198                <div className="mt-7 text-xl font-bold leading-6">
+199                  Fast turnaround times
+200                </div>
+201                <div className="self-stretch mt-6 text-base leading-6 text-center">
+202                  TDP was built for flexibility—we quickly adapt and grow as
+203                  you grow
+204                </div>
+205              </div>
+206            </div>
+207          </div>
+208        </div>
+209        <div className="mt-48 text-4xl font-bold leading-10 text-center text-black capitalize max-md:mt-10 max-md:max-w-full">
+210          How<span className="text-red-400"> signing up</span> with The Design
+211          Project <span className="text-red-400">works</span>
+212          <span className="text-black">!?</span>
+213        </div>
+214        <div className="mt-7 text-base text-center text-stone-900 w-[944px] max-md:max-w-full">
+215          Take a minute to imagine how you’d feel watching your user count
+216          grow, and retention rates stay consistently high. When you
+217          prioritize effective UX, better retention and growth are natural
+218          consequences. Backed by countless hours of research and testing, TDP
+219          blends UX, UI, and Product design into a deliciously smooth process
+220          that fuels productivity and success.
+221        </div>
+222        <div className="mt-16 max-w-full w-[1027px] max-md:mt-10">
+223          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+224            <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+225              <div className="flex flex-col items-center text-center max-md:mt-10">
+226                <div className="justify-center items-center px-3.5 text-4xl font-bold leading-10 capitalize whitespace-nowrap rounded-full bg-[linear-gradient(180deg,#FF734F_18.18%,#E83C11_100%)] h-[59px] text-neutral-100 w-[59px]">
+227                  01
+228                </div>
+229                <div className="mt-8 text-xl font-semibold leading-6 text-red-500 capitalize">
+230                  Sign up for one of our services
+231                </div>
+232                <img
+233                  loading="lazy"
+234                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/85d36c7fa244740b1c82e8bf234a6aaff5942efeb2f0f2338f7ae23432ea4d75?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/85d36c7fa244740b1c82e8bf234a6aaff5942efeb2f0f2338f7ae23432ea4d75?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/85d36c7fa244740b1c82e8bf234a6aaff5942efeb2f0f2338f7ae23432ea4d75?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/85d36c7fa244740b1c82e8bf234a6aaff5942efeb2f0f2338f7ae23432ea4d75?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/85d36c7fa244740b1c82e8bf234a6aaff5942efeb2f0f2338f7ae23432ea4d75?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/85d36c7fa244740b1c82e8bf234a6aaff5942efeb2f0f2338f7ae23432ea4d75?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/85d36c7fa244740b1c82e8bf234a6aaff5942efeb2f0f2338f7ae23432ea4d75?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/85d36c7fa244740b1c82e8bf234a6aaff5942efeb2f0f2338f7ae23432ea4d75?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+235                  className="mt-5 max-w-full aspect-[0.94] w-[159px]"
+236                />
+237                <div className="self-stretch mt-3.5 text-sm text-black">
+238                  Sign up for one of our affordable subscription play which
+239                  offer a variety of options to fit your unique needs.
+240                </div>
+241              </div>
+242            </div>
+243            <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+244              <div className="flex flex-col items-center mt-1.5 text-center max-md:mt-10">
+245                <div className="justify-center items-center px-2.5 text-4xl font-bold leading-10 capitalize whitespace-nowrap rounded-full bg-[linear-gradient(180deg,#FF734F_18.18%,#E83C11_100%)] h-[59px] text-neutral-100 w-[59px]">
+246                  02
+247                </div>
+248                <div className="mt-8 text-xl font-semibold leading-6 text-red-500 capitalize">
+249                  Meet your perfect match
+250                </div>
+251                <img
+252                  loading="lazy"
+253                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/52068dfbe940fe8525e6fdf5e90d8eeadb75763253b5d349e2b1b26db62f18b5?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/52068dfbe940fe8525e6fdf5e90d8eeadb75763253b5d349e2b1b26db62f18b5?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/52068dfbe940fe8525e6fdf5e90d8eeadb75763253b5d349e2b1b26db62f18b5?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/52068dfbe940fe8525e6fdf5e90d8eeadb75763253b5d349e2b1b26db62f18b5?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/52068dfbe940fe8525e6fdf5e90d8eeadb75763253b5d349e2b1b26db62f18b5?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/52068dfbe940fe8525e6fdf5e90d8eeadb75763253b5d349e2b1b26db62f18b5?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/52068dfbe940fe8525e6fdf5e90d8eeadb75763253b5d349e2b1b26db62f18b5?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/52068dfbe940fe8525e6fdf5e90d8eeadb75763253b5d349e2b1b26db62f18b5?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+254                  className="mt-7 max-w-full aspect-[1.03] w-[159px]"
+255                />
+256                <div className="self-stretch mt-5 text-sm text-black">
+257                  We match you with the best TDP design expert for your needs.
+258                  Then we schedule a call to learn about your startup.
+259                </div>
+260              </div>
+261            </div>
+262            <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+263              <div className="flex flex-col grow text-center max-md:mt-10">
+264                <div className="justify-center items-center self-center px-2.5 text-4xl font-bold leading-10 capitalize whitespace-nowrap rounded-full bg-[linear-gradient(180deg,#FF734F_18.18%,#E83C11_100%)] h-[59px] text-neutral-100 w-[59px]">
+265                  03
+266                </div>
+267                <div className="mt-7 text-xl font-semibold leading-6 text-red-500 capitalize">
+268                  The first sprint begins (hold on tight)
+269                </div>
+270                <img
+271                  loading="lazy"
+272                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ad73cde5d12cdc87b84f8fccc53461a643e150a4f39048613669165af7471f3e?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/ad73cde5d12cdc87b84f8fccc53461a643e150a4f39048613669165af7471f3e?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ad73cde5d12cdc87b84f8fccc53461a643e150a4f39048613669165af7471f3e?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/ad73cde5d12cdc87b84f8fccc53461a643e150a4f39048613669165af7471f3e?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/ad73cde5d12cdc87b84f8fccc53461a643e150a4f39048613669165af7471f3e?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ad73cde5d12cdc87b84f8fccc53461a643e150a4f39048613669165af7471f3e?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/ad73cde5d12cdc87b84f8fccc53461a643e150a4f39048613669165af7471f3e?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/ad73cde5d12cdc87b84f8fccc53461a643e150a4f39048613669165af7471f3e?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+273                  className="self-center mt-6 max-w-full aspect-square w-[159px]"
+274                />
+275                <div className="mt-6 text-sm text-black">
+276                  TDP manages the project, learns the intimate details of what
+277                  your users want, and delivers impactful design iterations.
+278                </div>
+279              </div>
+280            </div>
+281          </div>
+282        </div>
+283      </div>
+284    </div>
+285    <div className="flex justify-center items-center px-16 py-20 mt-1.5 w-full bg-stone-800 max-md:px-5 max-md:max-w-full">
+286      <div className="flex flex-col mt-16 w-full max-w-[1160px] max-md:mt-10 max-md:max-w-full">
+287        <div className="self-center text-4xl font-bold text-center text-red-500 capitalize leading-[55px] max-md:max-w-full">
+288          How <span className="text-red-500">accessible</span> UX design is
+289          changing the <span className="text-red-500">businesses</span> for
+290          the better
+291        </div>
+292        <div className="py-px pl-5 mt-32 bg-emerald-200 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
+293          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+294            <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+295              <div className="flex flex-col items-start self-stretch px-11 py-16 my-auto w-full text-base leading-5 text-white capitalize rounded-2xl shadow-2xl bg-stone-800 max-md:px-5 max-md:mt-10 max-md:max-w-full">
+296                <div className="justify-center px-3.5 py-3 font-extrabold whitespace-nowrap bg-red-400 rounded-md">
+297                  Socure
+298                </div>
+299                <div className="self-stretch mt-6 text-3xl font-bold leading-9 max-md:max-w-full">
+300                  A predictive analytics platform for consumers digital
+301                  identity verification
+302                </div>
+303                <div className="justify-center items-start px-3.5 py-4 mt-8 max-w-full font-medium uppercase rounded-xl border border-red-400 border-solid w-[217px] max-md:pr-5">
+304                  read case study
+305                </div>
+306              </div>
+307            </div>
+308            <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+309              <img
+310                loading="lazy"
+311                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/58c3d9524e116e1d2860c780d9f32aeb7a6a81e9b5b40356a23e2745d0db585c?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/58c3d9524e116e1d2860c780d9f32aeb7a6a81e9b5b40356a23e2745d0db585c?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/58c3d9524e116e1d2860c780d9f32aeb7a6a81e9b5b40356a23e2745d0db585c?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/58c3d9524e116e1d2860c780d9f32aeb7a6a81e9b5b40356a23e2745d0db585c?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/58c3d9524e116e1d2860c780d9f32aeb7a6a81e9b5b40356a23e2745d0db585c?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/58c3d9524e116e1d2860c780d9f32aeb7a6a81e9b5b40356a23e2745d0db585c?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/58c3d9524e116e1d2860c780d9f32aeb7a6a81e9b5b40356a23e2745d0db585c?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/58c3d9524e116e1d2860c780d9f32aeb7a6a81e9b5b40356a23e2745d0db585c?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+312                className="grow w-full aspect-[1.01] max-md:max-w-full"
+313              />
+314            </div>
+315          </div>
+316        </div>
+317        <div className="flex flex-col justify-center py-px mt-16 bg-slate-200 max-md:mt-10 max-md:max-w-full">
+318          <img
+319            loading="lazy"
+320            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/f7c15e2a99791c42d031afea6eab40fcaccf759e1b8dc4b65b58952b64798f7d?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7c15e2a99791c42d031afea6eab40fcaccf759e1b8dc4b65b58952b64798f7d?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7c15e2a99791c42d031afea6eab40fcaccf759e1b8dc4b65b58952b64798f7d?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7c15e2a99791c42d031afea6eab40fcaccf759e1b8dc4b65b58952b64798f7d?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7c15e2a99791c42d031afea6eab40fcaccf759e1b8dc4b65b58952b64798f7d?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7c15e2a99791c42d031afea6eab40fcaccf759e1b8dc4b65b58952b64798f7d?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7c15e2a99791c42d031afea6eab40fcaccf759e1b8dc4b65b58952b64798f7d?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7c15e2a99791c42d031afea6eab40fcaccf759e1b8dc4b65b58952b64798f7d?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+321            className="w-full aspect-[2.04] max-md:max-w-full"
+322          />
+323        </div>
+324        <div className="flex flex-col justify-center py-px mt-16 bg-red-500 max-md:mt-10 max-md:max-w-full">
+325          <img
+326            loading="lazy"
+327            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b08ff5257707b893d4e2eae00da64eb5716183755b4993c8a370d16813ee0a4d?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b08ff5257707b893d4e2eae00da64eb5716183755b4993c8a370d16813ee0a4d?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b08ff5257707b893d4e2eae00da64eb5716183755b4993c8a370d16813ee0a4d?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b08ff5257707b893d4e2eae00da64eb5716183755b4993c8a370d16813ee0a4d?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b08ff5257707b893d4e2eae00da64eb5716183755b4993c8a370d16813ee0a4d?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b08ff5257707b893d4e2eae00da64eb5716183755b4993c8a370d16813ee0a4d?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b08ff5257707b893d4e2eae00da64eb5716183755b4993c8a370d16813ee0a4d?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b08ff5257707b893d4e2eae00da64eb5716183755b4993c8a370d16813ee0a4d?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+328            className="w-full aspect-[2.04] max-md:max-w-full"
+329          />
+330        </div>
+331        <div className="flex gap-5 justify-between items-start px-px mt-8 w-full max-md:flex-wrap max-md:max-w-full">
+332          <img
+333            loading="lazy"
+334            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed0e93681ec2d99e5b5feacf7780e50e7526e81ba7fd7081dbddaf7af951c9f1?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+335            className="shrink-0 mt-36 aspect-[0.58] fill-white w-[34px] max-md:mt-10"
+336          />
+337          <div className="flex gap-3.5 items-start self-stretch max-md:flex-wrap">
+338            <div className="grow self-start text-9xl font-bold text-center text-red-400 leading-[175.2px] max-md:text-4xl">
+339              “
+340            </div>
+341            <div className="flex flex-col grow shrink-0 items-center self-end mt-7 basis-0 w-fit max-md:max-w-full">
+342              <div className="self-stretch text-4xl font-bold leading-10 text-center text-white max-md:max-w-full">
+343                TDP helped identify the main pain points and designed a new UX
+344                that is accessible and easy to understand. The redesign pushed
+345                us forward on our mission to be able to verify 100% of IDs in
+346                real-time, and we raised over $100M in funding.
+347              </div>
+348              <div className="flex gap-5 justify-between mt-12 max-md:mt-10">
+349                <img
+350                  loading="lazy"
+351                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/a8954d17d46549fede08f7e617ba0ff816697c669f347a86c8b0588ed106b07f?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8954d17d46549fede08f7e617ba0ff816697c669f347a86c8b0588ed106b07f?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8954d17d46549fede08f7e617ba0ff816697c669f347a86c8b0588ed106b07f?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8954d17d46549fede08f7e617ba0ff816697c669f347a86c8b0588ed106b07f?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8954d17d46549fede08f7e617ba0ff816697c669f347a86c8b0588ed106b07f?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8954d17d46549fede08f7e617ba0ff816697c669f347a86c8b0588ed106b07f?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8954d17d46549fede08f7e617ba0ff816697c669f347a86c8b0588ed106b07f?apiKey=f09a5d4ed6984f948f90980dfd76b783&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8954d17d46549fede08f7e617ba0ff816697c669f347a86c8b0588ed106b07f?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+352                  className="shrink-0 aspect-square w-[74px]"
+353                />
+354                <div className="flex flex-col my-auto">
+355                  <div className="text-2xl font-bold leading-7 text-red-400 uppercase">
+356                    Erick Desoto
+357                  </div>
+358                  <div className="text-base leading-5 text-white">
+359                    VP of Product at Socure
+360                  </div>
+361                </div>
+362              </div>
+363              <div className="justify-center px-12 py-5 mt-12 text-lg font-bold leading-5 text-white uppercase bg-red-400 rounded-xl max-md:px-5 max-md:mt-10">
+364                see our case studies
+365              </div>
+366            </div>
+367          </div>
+368          <img
+369            loading="lazy"
+370            src="https://cdn.builder.io/api/v1/image/assets/TEMP/f1fc8a6a815b03933526c5e8e2d00e453beecc75eefc460e081c470e7e028225?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+371            className="shrink-0 mt-36 aspect-[0.6] fill-white w-[35px] max-md:mt-10"
+372          />
+373        </div>
+374      </div>
+375    </div>
+376    <div className="flex flex-col items-center px-16 pt-20 w-full bg-neutral-100 max-md:px-5 max-md:max-w-full">
+377      <div className="flex z-10 flex-col items-center mt-24 mb-0 w-full max-w-[1245px] max-md:mt-10 max-md:mb-2.5 max-md:max-w-full">
+378        <div className="flex gap-0 font-bold text-center uppercase whitespace-nowrap">
+379          <div className="px-5 pt-4 pb-4 text-sm leading-4 text-white bg-black rounded-xl max-md:px-5">
+380            Monthly
+381          </div>
+382          <div className="flex gap-0 pr-2.5 pl-0.5 text-sm leading-4 text-black rounded-xl border border-red-400 border-solid">
+383            <div className="px-5 pt-4 pb-4">Quarterly</div>
+384            <div className="flex gap-4 rounded-none">
+385              <div className="shrink-0 w-px bg-red-400 border border-red-400 border-solid h-[47px]" />
+386              <div className="my-auto">Yearly</div>
+387            </div>
+388          </div>
+389        </div>
+390        <div className="self-stretch mt-28 max-md:mt-10 max-md:max-w-full">
+391          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+392            <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+393              <div className="flex flex-col grow items-center px-12 pt-16 pb-9 text-sm font-bold text-black rounded-2xl border-2 border-red-400 border-solid max-md:px-5 max-md:mt-10">
+394                <div className="text-3xl leading-8 text-center text-stone-800">
+395                  Essential
+396                </div>
+397                <div className="mt-5 text-base leading-5 text-center">
+398                  Great for basic UI/UX design needs
+399                </div>
+400                <div className="mt-20 text-4xl leading-8 text-center text-red-400 uppercase max-md:mt-10">
+401                  $2,600
+402                  <br />
+403                  <span className="text-base">per month</span>
+404                </div>
+405                <div className="shrink-0 mt-11 h-0.5 bg-red-400 w-[228px] max-md:mt-10" />
+406                <div className="self-stretch mt-10 text-base leading-5 uppercase max-md:mt-10">
+407                  What’s included:
+408                </div>
+409                <div className="flex flex-col items-start self-stretch px-7 pb-20 mt-4 leading-[143%] max-md:px-5">
+410                  <div>UI execution</div>
+411                  <div className="mt-2.5 text-base leading-5">
+412                    Connect on Slack
+413                  </div>
+414                  <div className="mt-2.5">One 30 minute meeting a week</div>
+415                </div>
+416                <div className="self-stretch mt-20 text-base leading-5 uppercase max-md:mt-10">
+417                  Design Team
+418                </div>
+419                <div className="mt-5 leading-5">
+420                  1 designer working with 4-5 other customers at the same time
+421                </div>
+422                <div className="flex flex-col justify-center self-stretch p-0.5 mt-28 uppercase rounded-2xl border-2 border-black border-solid leading-[114%] max-md:mt-10">
+423                  <div className="flex gap-2 px-20 py-6 max-md:px-5">
+424                    <div>Try free</div>
+425                    <img
+426                      loading="lazy"
+427                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/a91acb9f938de579e21bbaaf9b0ce53e9fcaf965d64d144cdbdd7431d1285622?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+428                      className="shrink-0 aspect-[1.37] w-[22px]"
+429                    />
+430                  </div>
+431                </div>
+432              </div>
+433            </div>
+434            <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+435              <div className="flex flex-col grow px-14 pt-16 pb-10 mx-auto w-full text-sm font-bold text-white bg-red-400 rounded-2xl border-2 border-black border-solid max-md:px-5 max-md:mt-10">
+436                <div className="self-center text-3xl leading-8 text-center">
+437                  Pro
+438                </div>
+439                <div className="self-center mt-5 text-center leading-[143%]">
+440                  Great for end-to-end product design
+441                </div>
+442                <div className="mt-20 text-4xl leading-8 text-center text-black uppercase max-md:mt-10">
+443                  $3,595
+444                  <br />
+445                  <span className="text-xs text-black">per month</span>
+446                </div>
+447                <div className="shrink-0 self-center mt-11 h-0.5 bg-white w-[228px] max-md:mt-10" />
+448                <div className="mt-10 text-base leading-5 uppercase max-md:mt-10">
+449                  What’s included:
+450                </div>
+451                <div className="flex flex-col px-7 pb-12 mt-4 leading-[143%] max-md:px-5">
+452                  <div>Everything in Essential</div>
+453                  <div className="mt-2.5 text-base leading-5">
+454                    Full UI/UX design and research
+455                  </div>
+456                  <div className="mt-2.5 text-base leading-5">
+457                    Dev ready Figma files
+458                  </div>
+459                  <div className="mt-2.5">One 1 hour meeting a week</div>
+460                </div>
+461                <div className="mt-20 text-base leading-5 uppercase max-md:mt-10">
+462                  Design Team
+463                </div>
+464                <div className="flex flex-col px-7 pb-2.5 mt-4 max-md:px-5">
+465                  <div className="leading-[143%]">1 design lead</div>
+466                  <div className="mt-2.5 leading-5">
+467                    1 designer working on 2-3 other customers at the same time
+468                  </div>
+469                </div>
+470                <div className="flex gap-2 px-20 py-6 mt-16 uppercase rounded-2xl border-2 border-white border-solid leading-[114%] max-md:px-5 max-md:mt-10">
+471                  <div>try free</div>
+472                  <img
+473                    loading="lazy"
+474                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed026ee33715dee1d5376e217aa07ac5f358c661ea9bd4ea37c15de9593ba5c6?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+475                    className="shrink-0 aspect-[1.37] w-[22px]"
+476                  />
+477                </div>
+478              </div>
+479            </div>
+480            <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+481              <div className="flex flex-col grow px-12 py-14 text-sm font-bold text-black rounded-2xl border-2 border-red-400 border-solid max-md:px-5 max-md:mt-10">
+482                <div className="self-center text-3xl leading-8 text-center text-stone-800">
+483                  Turbo
+484                </div>
+485                <div className="self-center mt-6 text-center">
+486                  Great for products that require more design horsepower and
+487                  tight timelines
+488                </div>
+489                <div className="mt-14 text-4xl leading-8 text-center text-red-400 uppercase max-md:mt-10">
+490                  $5,200
+491                  <br />
+492                  <span className="text-base">per month</span>
+493                </div>
+494                <div className="shrink-0 self-center mt-11 h-0.5 bg-red-400 w-[228px] max-md:mt-10" />
+495                <div className="mt-10 text-base leading-5 uppercase max-md:mt-10">
+496                  What’s included:
+497                </div>
+498                <div className="flex flex-col px-7 mt-4 leading-[143%] max-md:px-5">
+499                  <div className="self-start">
+500                    Everything in Essential and Pro
+501                  </div>
+502                  <div className="mt-2.5">User Testing</div>
+503                  <div className="mt-2.5">Figma Prototypes</div>
+504                  <div className="mt-2.5">Flexible meetings</div>
+505                  <div className="mt-2.5 text-base leading-5">
+506                    Custom workflows to speed up delivery
+507                  </div>
+508                </div>
+509                <div className="mt-20 text-base leading-5 uppercase max-md:mt-10">
+510                  Design Team
+511                </div>
+512                <div className="flex flex-col items-start pr-14 pb-2.5 pl-7 mt-4 max-md:px-5">
+513                  <div className="leading-[143%]">1 design lead</div>
+514                  <div className="mt-2.5 leading-5">
+515                    1 designer working on 1 other customer at the same time
+516                  </div>
+517                </div>
+518                <div className="flex flex-col justify-center p-0.5 mt-16 uppercase rounded-2xl border-2 border-black border-solid leading-[114%] max-md:mt-10">
+519                  <div className="flex gap-2 px-20 py-6 rounded-2xl max-md:px-5">
+520                    <div>try free</div>
+521                    <img
+522                      loading="lazy"
+523                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/03578257f2f7a5d6ffaf10e0ccc1807fbed482775e8624026c32f7eee46f2521?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+524                      className="shrink-0 aspect-[1.37] w-[22px]"
+525                    />
+526                  </div>
+527                </div>
+528              </div>
+529            </div>
+530          </div>
+531        </div>
+532        <div className="shrink-0 mt-40 max-w-full h-0.5 bg-black w-[600px] max-md:mt-10" />
+533        <div className="mt-8 text-lg font-bold leading-5 text-center text-red-500">
+534          Hey! Need a custom plan?{" "}
+535          <span className="text-red-500">Contact us!</span>
+536        </div>
+537        <div className="mt-5 text-sm leading-5 text-center text-black max-md:max-w-full">
+538          Try us risk free for 7 days, if you don’t love us, get your money
+539          back.
+540        </div>
+541        <div className="px-16 pt-5 pb-5 mt-11 text-base font-bold leading-5 text-center text-white uppercase bg-red-400 rounded-2xl max-md:px-6 max-md:mt-10">
+542          Get Started
+543        </div>
+544        <div className="mt-56 text-4xl font-bold leading-10 text-center text-red-400 capitalize max-md:mt-10 max-md:max-w-full">
+545          How to know if <span className="text-red-400">TDP</span> is right
+546          for your <span className="text-red-400">startup</span>
+547        </div>
+548        <div className="mt-20 max-w-full w-[960px] max-md:mt-10">
+549          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+550            <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+551              <div className="grow justify-center px-8 py-5 w-full text-lg font-bold leading-7 text-white bg-black rounded-[35px_35px_35px_0px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
+552                You want a new, innovative, and user-centered UX strategy for
+553                an existing product
+554              </div>
+555            </div>
+556            <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+557              <div className="justify-center items-start px-8 py-6 w-full text-lg font-bold leading-7 text-white bg-red-400 shadow-lg rounded-[35px_35px_0px_35px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
+558                You want to understand where users struggle when using your
+559                product
+560              </div>
+561            </div>
+562          </div>
+563        </div>
+564        <div className="mt-9 max-w-full w-[960px]">
+565          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+566            <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+567              <div className="justify-center px-8 py-5 w-full text-lg font-bold leading-7 text-white bg-black rounded-[35px_35px_35px_0px] max-md:pr-7 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
+568                You want to translate complex data into an easy-to-understand
+569                dashboard
+570              </div>
+571            </div>
+572            <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+573              <div className="grow justify-center px-8 py-5 w-full text-lg font-bold leading-7 text-white bg-black rounded-[35px_35px_0px_35px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
+574                You need additional design resources that synergize with your
+575                (already) amazing design team
+576              </div>
+577            </div>
+578          </div>
+579        </div>
+580        <div className="flex gap-5 mt-16 max-w-full text-lg font-bold leading-7 text-white w-[960px] max-md:flex-wrap max-md:mt-10">
+581          <div className="grow justify-center items-start px-8 py-5 bg-black rounded-[35px_35px_35px_0px] w-fit max-md:px-5 max-md:max-w-full">
+582            You‘re researching how UX can impact you business growth
+583          </div>
+584          <div className="grow justify-center px-8 py-5 bg-black rounded-[35px_35px_0px_35px] w-fit max-md:px-5 max-md:max-w-full">
+585            You want to understand your users and design products that meet
+586            their needs
+587          </div>
+588        </div>
+589        <div className="mt-56 text-4xl font-bold leading-10 text-center text-red-500 capitalize max-md:mt-10 max-md:max-w-full">
+590          Our most <span className="text-red-500">frequently</span> asked
+591          questions
+592        </div>
+593        <div className="flex gap-5 mt-20 w-full text-2xl font-semibold leading-7 text-black max-w-[1147px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
+594          <div className="flex-auto max-md:max-w-full">
+595            Do I really get unlimited design services?
+596          </div>
+597          <img
+598            loading="lazy"
+599            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ae8ff44d556cefc642fd6ee5eeb2579abb0d287db70e9e35c73e0fa79042eef?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+600            className="shrink-0 self-start mt-1.5 aspect-[2] fill-orange-600 w-[34px]"
+601          />
+602        </div>
+603        <div className="shrink-0 mt-3 max-w-full h-px bg-orange-600 border border-orange-600 border-solid w-[1147px]" />
+604        <div className="flex gap-5 mt-14 w-full text-2xl font-semibold leading-7 text-black max-w-[1147px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
+605          <div className="flex-auto max-md:max-w-full">
+606            What is a realistic turnaround time?
+607          </div>
+608          <img
+609            loading="lazy"
+610            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ae8ff44d556cefc642fd6ee5eeb2579abb0d287db70e9e35c73e0fa79042eef?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+611            className="shrink-0 self-start aspect-[2] fill-orange-600 w-[34px]"
+612          />
+613        </div>
+614        <div className="shrink-0 mt-4 max-w-full h-px bg-orange-600 border border-orange-600 border-solid w-[1147px]" />
+615        <div className="flex gap-5 mt-14 w-full text-2xl font-semibold leading-7 text-black max-w-[1147px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
+616          <div className="flex-auto max-md:max-w-full">
+617            I need my designs ASAP—can you help?
+618          </div>
+619          <img
+620            loading="lazy"
+621            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ae8ff44d556cefc642fd6ee5eeb2579abb0d287db70e9e35c73e0fa79042eef?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+622            className="shrink-0 self-start aspect-[2] fill-orange-600 w-[34px]"
+623          />
+624        </div>
+625        <div className="shrink-0 mt-3.5 max-w-full h-px bg-orange-600 border border-orange-600 border-solid w-[1147px]" />
+626        <div className="flex gap-5 mt-14 w-full text-2xl font-semibold leading-7 text-black max-w-[1147px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
+627          <div className="flex-auto max-md:max-w-full">
+628            What types of projects do you work on?
+629          </div>
+630          <img
+631            loading="lazy"
+632            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ae8ff44d556cefc642fd6ee5eeb2579abb0d287db70e9e35c73e0fa79042eef?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+633            className="shrink-0 self-start aspect-[2] fill-orange-600 w-[34px]"
+634          />
+635        </div>
+636        <div className="shrink-0 mt-3 max-w-full h-px bg-orange-600 border border-orange-600 border-solid w-[1147px]" />
+637        <div className="flex gap-5 mt-14 w-full text-2xl font-semibold leading-7 text-black max-w-[1147px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
+638          <div className="flex-auto max-md:max-w-full">
+639            What if I want to cancel my service?
+640          </div>
+641          <img
+642            loading="lazy"
+643            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ae8ff44d556cefc642fd6ee5eeb2579abb0d287db70e9e35c73e0fa79042eef?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+644            className="shrink-0 self-start aspect-[2] fill-orange-600 w-[34px]"
+645          />
+646        </div>
+647        <div className="shrink-0 mt-4 max-w-full h-px bg-orange-600 border border-orange-600 border-solid w-[1147px]" />
+648        <div className="mt-52 text-5xl font-bold leading-10 text-center text-red-400 capitalize w-[652px] max-md:mt-10 max-md:max-w-full max-md:text-4xl max-md:leading-10">
+649          Let’s <span className="text-red-400">build</span> something{" "}
+650          <span className="text-red-400">awesome</span> together!
+651        </div>
+652        <div className="mt-7 text-sm leading-5 text-center text-black max-md:max-w-full">
+653          Try us risk free for 7 days, if you don’t love us, get your money
+654          back.
+655        </div>
+656        <div className="px-16 pt-5 pb-5 mt-10 text-base font-bold leading-5 text-center text-white uppercase bg-red-400 rounded-2xl max-md:px-6">
+657          Get Started
+658        </div>
+659        <div className="mt-36 max-w-full w-[601px] max-md:mt-10">
+660          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+661            <div className="flex flex-col w-[56%] max-md:ml-0 max-md:w-full">
+662              <img
+663                loading="lazy"
+664                src="https://cdn.builder.io/api/v1/image/assets/TEMP/9e70a18a70d839fe8497d17fe5851b097437a970c23fffe515bf547bf5e6c1a1?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+665                className="w-full aspect-[0.91] max-md:mt-10"
+666              />
+667            </div>
+668            <div className="flex flex-col ml-5 w-[44%] max-md:ml-0 max-md:w-full">
+669              <img
+670                loading="lazy"
+671                src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ca22d5901972bbeef54a75c60a1b88e1c478edbc655287fa8c0cbd167ea236b?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+672                className="grow w-full aspect-[0.7] max-md:mt-10"
+673              />
+674            </div>
+675          </div>
+676        </div>
+677      </div>
+678    </div>
+679    <div className="flex justify-center items-center px-16 py-20 w-full text-white bg-stone-900 max-md:px-5 max-md:max-w-full">
+680      <div className="flex gap-5 justify-between items-start mt-24 mb-20 w-full max-w-[1160px] max-md:flex-wrap max-md:my-10 max-md:max-w-full">
+681        <div className="flex flex-col max-md:max-w-full">
+682          <img
+683            loading="lazy"
+684            src="https://cdn.builder.io/api/v1/image/assets/TEMP/e875deba5d2c3b0c8040288fa37ab8116eb9910e19d720fa530c2bdcac0ff094?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+685            className="max-w-full aspect-[9.09] w-[571px]"
+686          />
+687          <div className="flex gap-5 mt-7 max-md:flex-wrap">
+688            <div className="flex gap-4 text-sm leading-5 whitespace-nowrap">
+689              <img
+690                loading="lazy"
+691                src="https://cdn.builder.io/api/v1/image/assets/TEMP/6db344fbf6e8398c5b03cf707755ccc34560b56721b07c4abda891cd4ec4b41f?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+692                className="shrink-0 aspect-square w-[25px]"
+693              />
+694              <div className="flex-auto my-auto">hello@designproject.io</div>
+695            </div>
+696            <div className="flex flex-auto gap-5 justify-between">
+697              <div className="flex gap-1.5 text-sm leading-5 whitespace-nowrap">
+698                <img
+699                  loading="lazy"
+700                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/85aa586dc6aca06fedafe84c7af20da7675ac84a163507a2f03a28b0a8bac518?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+701                  className="shrink-0 aspect-[1.04] w-[26px]"
+702                />
+703                <div className="my-auto">@designproject.io</div>
+704              </div>
+705              <div className="flex gap-1.5 text-base leading-5">
+706                <img
+707                  loading="lazy"
+708                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8507491432b0c903ee9aeb021c17f02ddc750632ec2e0bc4124439fb18c4e36e?apiKey=f09a5d4ed6984f948f90980dfd76b783&"
+709                  className="shrink-0 aspect-[1.04] w-[26px]"
+710                />
+711                <div className="my-auto">The Design Project</div>
+712              </div>
+713            </div>
+714          </div>
+715        </div>
+716        <div className="flex flex-col mt-3 text-base font-bold leading-5 text-right uppercase">
+717          <div>How it works</div>
+718          <div className="flex flex-col items-end pl-8 mt-7 max-md:pl-5">
+719            <div>About</div>
+720            <div className="self-start mt-7">Our work</div>
+721            <div className="mt-7">Blog</div>
+722          </div>
+723          <div className="mt-7">Contact us</div>
+724        </div>
+725      </div>
+726    </div>
+727  </div>
+728);
+729}
